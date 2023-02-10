@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const NavBar = (props) => {
   return (
-    <Container className="d-flex">
+    <Container classNameName="d-flex">
       <nav
         className="navbar navbar-expand-lg navbar-dark"
         /* {style="background-color: #221f1f"} */
@@ -26,7 +26,7 @@ const NavBar = (props) => {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <a href={props.href}>
-                Home <span className="sr-only">{/* (current) */}</span>
+                Home <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item active">
@@ -43,11 +43,9 @@ const NavBar = (props) => {
             </li>
           </ul>
           <i className="fa fa-search icons"></i>
-          <div id="kids">
-            KIDS
-            <i className="fa fa-bell icons"></i>
-            <i className="fa fa-user icons"></i>
-          </div>
+          <div id="kids">KIDS</div>
+          <i className="fa fa-bell icons"></i>
+          <i className="fa fa-user icons"></i>
         </div>
       </nav>
     </Container>

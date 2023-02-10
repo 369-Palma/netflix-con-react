@@ -1,4 +1,4 @@
-const Riga1 = async function () {
+/* const Riga1 = async function () {
   try {
     let res = await fetch(
       "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=harry%20potter"
@@ -17,3 +17,4 @@ const Riga1 = async function () {
 };
 
 export default Riga1;
+ */

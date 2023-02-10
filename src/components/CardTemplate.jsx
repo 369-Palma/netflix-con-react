@@ -1,4 +1,4 @@
-import Card from "react-bootstrap/Card";
+/* import Card from "react-bootstrap/Card";
 
 function CardTemplate(props) {
   return (
@@ -9,10 +9,11 @@ function CardTemplate(props) {
         alt={props.movie.Title}
       />
       <Card.Body>
-        <Card.Title>{props.movie.title}</Card.Title>
+        <Card.Title>{props.movie.Title}</Card.Title>
       </Card.Body>
     </Card>
   );
 }
 
 export default CardTemplate;
+ */
