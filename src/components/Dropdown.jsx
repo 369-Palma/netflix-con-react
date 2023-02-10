@@ -14,7 +14,7 @@ function DropDown() {
               type="button"
               id="nav-dropdown-dark-example"
               title="Genres"
-              menuVariant=" #221f1f"
+              menuVariant=" dark"
             >
               <NavDropdown.Item href="#action/3.1">Comedy</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Drama</NavDropdown.Item>
