@@ -7,6 +7,10 @@ body {
   background-color: #221f1f;
 }
 
+a {
+  text-decoration-line: none;
+}
+
 h2,
 h4,
 footer {
@@ -23,7 +27,22 @@ footer {
 .navbar-nav {
   font-size: 0.9em;
 }
+.navbar-brand img {
+  width: 100px;
+  height: 55px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item {
+  margin-right: 15px;
+}
 
+.nav-item a {
+  font-weight: bold;
+  text-decoration-style: none;
+}
 #kids {
   color: #f5f5f1;
   font-size: 0.8em;

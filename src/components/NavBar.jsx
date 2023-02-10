@@ -1,47 +1,57 @@
-import { Component } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
-class NavBar extends Component {
-  render() {
-    return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container className="d-flex">
-          <Navbar.Brand href="../../assets/logo.png">Netflix</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">TV Shows</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Movies</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Recently Added
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  <i className="fa fa-search icons"></i>
-                </NavDropdown.Item>
-                <div id="kids">KIDS</div>
-                <NavDropdown.Item href="#action/3.4">
-                  <i className="fa fa-bell icons"></i>
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4">
-                  <i className="fa fa-user icons"></i>
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-            <Nav>
-              <Nav.Link href="#deets">More deets</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
-                Dank memes
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    );
-  }
-}
+const NavBar = (props) => {
+  return (
+    <Container className="d-flex">
+      <nav
+        className="navbar navbar-expand-lg navbar-dark"
+        /* {style="background-color: #221f1f"} */
+      >
+        <a className="navbar-brand" href={props.href}>
+          <img src="../../assets/logo.png" alt="logo" />
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <a href={props.href}>
+                Home <span className="sr-only">{/* (current) */}</span>
+              </a>
+            </li>
+            <li className="nav-item active">
+              <a href={props.href}>TV Shows</a>
+            </li>
+            <li className="nav-item">
+              <a href={props.href}>Movies</a>
+            </li>
+            <li className="nav-item">
+              <a href={props.href}>Recently Added</a>
+            </li>
+            <li className="nav-item">
+              <a href={props.href}>My List</a>
+            </li>
+          </ul>
+          <i className="fa fa-search icons"></i>
+          <div id="kids">
+            KIDS
+            <i className="fa fa-bell icons"></i>
+            <i className="fa fa-user icons"></i>
+          </div>
+        </div>
+      </nav>
+    </Container>
+  );
+};
 
 export default NavBar;
