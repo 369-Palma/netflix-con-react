@@ -14,7 +14,7 @@ class PhotoGallery extends Component {
       );
       if (res.ok) {
         const data = await res.json();
-        this.setState({ movies: data });
+        this.setState({ movies: data.Search });
         console.log(this.state.movies);
       } else {
         alert("Ops, c'è stato un errore!");
@@ -38,9 +38,9 @@ class PhotoGallery extends Component {
         <Row>
           {this.state.movies.map((film, index) => {
             return (
-              <Col xs={12} md={4} key={index}>
-                <Card>
-                  <Card.Img variant="top" src={film.Cover} />
+              <Col xs={6} md={2} key={index}>
+                <Card className="text-bg-dark">
+                  <Card.Img variant="top" src={film.Poster} />
                   <Card.Body>
                     <Card.Title>{film.Title}</Card.Title>
                   </Card.Body>
