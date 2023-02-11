@@ -28,6 +28,7 @@ class PhotoGallery extends Component {
   };
 
   componentDidMount() {
+    console.log(this.fetchDataMovies());
     this.fetchDataMovies();
   }
 
