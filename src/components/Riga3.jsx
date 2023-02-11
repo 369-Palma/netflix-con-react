@@ -1,8 +1,8 @@
-import { Component } from "react";
+/* import { Component } from "react";
 import { Container, Row, Card, Col } from "react-bootstrap";
 /* import CardTemplate from "./CardTemplate"; */
 
-class PhotoGallery2 extends Component {
+class PhotoGallery3 extends Component {
   state = {
     movies: [],
   };
@@ -10,7 +10,7 @@ class PhotoGallery2 extends Component {
   fetchDataMovies = async () => {
     try {
       let res = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=orphan%20black"
+        "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=howImetyourmother"
       );
       if (res.ok) {
         const data = await res.json();
@@ -54,4 +54,5 @@ class PhotoGallery2 extends Component {
   }
 }
 
-export default PhotoGallery2;
+export default PhotoGallery3;
+ */
