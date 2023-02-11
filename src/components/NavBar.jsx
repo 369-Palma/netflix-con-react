@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const NavBar = (props) => {
   return (
-    <Container classNameName="d-flex">
+    <Container className="d-flex">
       <nav
         className="navbar navbar-expand-lg navbar-dark"
         /* {style="background-color: #221f1f"} */
