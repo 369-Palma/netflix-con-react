@@ -5,12 +5,13 @@ import { Container, Row, Card, Col } from "react-bootstrap";
 class PhotoGallery extends Component {
   state = {
     movies: [],
+    titolo: "Harry%20Potter",
   };
 
   fetchDataMovies = async () => {
     try {
       let res = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=harry%20potter"
+        `http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=${this.state.titolo}`
       );
       if (res.ok) {
         const data = await res.json();
