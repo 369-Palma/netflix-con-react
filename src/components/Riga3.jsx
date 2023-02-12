@@ -1,6 +1,6 @@
-/* import { Component } from "react";
+import { Component } from "react";
 import { Container, Row, Card, Col } from "react-bootstrap";
-/* import CardTemplate from "./CardTemplate"; */
+/* import CardTemplate from "./CardTemplate";  */
 
 class PhotoGallery3 extends Component {
   state = {
@@ -10,7 +10,7 @@ class PhotoGallery3 extends Component {
   fetchDataMovies = async () => {
     try {
       let res = await fetch(
-        "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=howImetyourmother"
+        "http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=game%20of%20thrones"
       );
       if (res.ok) {
         const data = await res.json();
@@ -36,18 +36,22 @@ class PhotoGallery3 extends Component {
     return (
       <Container>
         <Row>
-          {this.state.movies.map((film, index) => {
-            return (
-              <Col xs={6} md={2} key={index}>
-                <Card className="text-bg-dark">
-                  <Card.Img variant="top" src={film.Poster} />
-                  <Card.Body>
-                    <Card.Title>{film.Title}</Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
+          {this.state.movies
+            .filter((film) => {
+              return film.Type !== "game" && film.Poster !== "N/A";
+            })
+            .map((film, index) => {
+              return (
+                <Col xs={6} md={2} key={index}>
+                  <Card className="text-bg-dark">
+                    <Card.Img variant="top" src={film.Poster} />
+                    <Card.Body>
+                      <Card.Title>{film.Title}</Card.Title>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              );
+            })}
         </Row>
       </Container>
     );
@@ -55,4 +59,3 @@ class PhotoGallery3 extends Component {
 }
 
 export default PhotoGallery3;
- */

@@ -36,18 +36,22 @@ class PhotoGallery2 extends Component {
     return (
       <Container>
         <Row>
-          {this.state.movies.map((film, index) => {
-            return (
-              <Col xs={6} md={2} key={index}>
-                <Card className="text-bg-dark">
-                  <Card.Img variant="top" src={film.Poster} />
-                  <Card.Body>
-                    <Card.Title>{film.Title}</Card.Title>
-                  </Card.Body>
-                </Card>
-              </Col>
-            );
-          })}
+          {this.state.movies
+            .filter((film) => {
+              return film.Type !== "game" && film.Poster !== "N/A";
+            })
+            .map((film, index) => {
+              return (
+                <Col xs={6} md={2} key={index}>
+                  <Card className="text-bg-dark">
+                    <Card.Img variant="top" src={film.Poster} />
+                    <Card.Body>
+                      <Card.Title>{film.Title}</Card.Title>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              );
+            })}
         </Row>
       </Container>
     );
