@@ -13,11 +13,11 @@ function App() {
       <NavBar href="#"></NavBar>
       <DropDown></DropDown>
       <Titoli title="Trending Now"></Titoli>
-      <PhotoGallery titolo="Harry%20Potter"></PhotoGallery>
+      <PhotoGallery titolo="money%20heist"></PhotoGallery>
       <Titoli title="Watch it Again"></Titoli>
       <PhotoGallery titolo="Orphan%20Black"></PhotoGallery>
       <Titoli title="New Releases"></Titoli>
-      <PhotoGallery titolo="The%20queen"></PhotoGallery>
+      <PhotoGallery titolo="queen"></PhotoGallery>
       <Footer href="#"></Footer>
     </div>
   );

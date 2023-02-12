@@ -47,7 +47,7 @@ class PhotoGallery extends Component {
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         )}
-        <Row className="d-flex flex-md-nowrap">
+        <Row className="d-flex">
           {this.state.movies
             .filter((film) => {
               return film.Type !== "game" && film.Poster !== "N/A";
