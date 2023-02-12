@@ -1,10 +1,13 @@
 import { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner, Alert } from "react-bootstrap";
 import CardTemplate from "./CardTemplate";
 
 class PhotoGallery extends Component {
   state = {
     movies: [],
+    erMessage: "",
+    loading: true,
+    badError: false,
   };
 
   fetchDataMovies = async () => {
@@ -14,16 +17,17 @@ class PhotoGallery extends Component {
       );
       if (res.ok) {
         const data = await res.json();
-        this.setState({ movies: data.Search });
+        this.setState({ movies: data.Search, erMessage: "", loading: false });
         console.log(this.state.movies);
       } else {
-        alert("Ops, c'è stato un errore!");
+        this.setState({
+          loading: false,
+          badError: true,
+          erMessage: `Errore nel caricamento dei contenuti. ERRORE: ${res.status}`,
+        });
       }
     } catch (error) {
-      alert(
-        "Qualcosa è andato storto durante la chiamata al server. Tipo di errore:",
-        error
-      );
+      this.setState({ loading: false, badError: true, message: error.message });
     }
   };
 
@@ -35,6 +39,14 @@ class PhotoGallery extends Component {
   render() {
     return (
       <Container>
+        {this.state.badError && (
+          <Alert variant="danger">{this.state.erMessage}</Alert>
+        )}
+        {this.state.loading && (
+          <Spinner animation="border" role="status" variant="info">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        )}
         <Row className="d-flex flex-md-nowrap">
           {this.state.movies
             .filter((film) => {

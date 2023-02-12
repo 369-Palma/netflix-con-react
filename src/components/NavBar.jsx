@@ -1,13 +1,13 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-/* import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; */
-const NavBar = (props) => {
+
+const NavBar = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">
           <img
-            alt=""
-            src="../../assets/logo.png"
+            alt="Netflix"
+            src="../Netflix-logo.png"
             width="30"
             height="30"
             className="d-inline-block align-top"
