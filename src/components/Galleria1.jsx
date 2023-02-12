@@ -5,13 +5,12 @@ import CardTemplate from "./CardTemplate";
 class PhotoGallery extends Component {
   state = {
     movies: [],
-    titolo: "Harry%20Potter",
   };
 
   fetchDataMovies = async () => {
     try {
       let res = await fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=${this.state.titolo}`
+        `http://www.omdbapi.com/?i=tt3896198&apikey=d8d3090e&s=${this.props.titolo}`
       );
       if (res.ok) {
         const data = await res.json();
@@ -41,9 +40,9 @@ class PhotoGallery extends Component {
             .filter((film) => {
               return film.Type !== "game" && film.Poster !== "N/A";
             })
-            .map((film, index) => {
+            .map((film, imdbID) => {
               return (
-                <Col xs={6} md={2} key={index}>
+                <Col xs={6} md={2} key={imdbID}>
                   <CardTemplate movie={film} />
                 </Col>
               );

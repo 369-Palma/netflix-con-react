@@ -1,8 +1,8 @@
-import { Component } from "react";
-import { Container, Row, Card, Col } from "react-bootstrap";
+/* import { Component } from "react";
+import { Container, Row, Card, Col } from "react-bootstrap"; */
 /* import CardTemplate from "./CardTemplate"; */
 
-class PhotoGallery2 extends Component {
+/* class PhotoGallery2 extends Component {
   state = {
     movies: [],
   };
@@ -58,4 +58,4 @@ class PhotoGallery2 extends Component {
   }
 }
 
-export default PhotoGallery2;
+export default PhotoGallery2; */
