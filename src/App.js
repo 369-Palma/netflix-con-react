@@ -5,9 +5,8 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import DropDown from "./components/Dropdown";
 import Titoli from "./components/TitoliRiga";
-import PhotoGallery from "./components/Galleria1";
-/* import PhotoGallery2 from "./components/Riga2";
-import PhotoGallery3 from "./components/Riga3"; */
+import PhotoGallery from "./components/Galleria";
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +17,7 @@ function App() {
       <Titoli title="Watch it Again"></Titoli>
       <PhotoGallery titolo="Orphan%20Black"></PhotoGallery>
       <Titoli title="New Releases"></Titoli>
-      <PhotoGallery titolo="The%20Lord%20of%20the%20ring"></PhotoGallery>
+      <PhotoGallery titolo="The%20queen"></PhotoGallery>
       <Footer href="#"></Footer>
     </div>
   );

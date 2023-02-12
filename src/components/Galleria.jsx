@@ -35,7 +35,7 @@ class PhotoGallery extends Component {
   render() {
     return (
       <Container>
-        <Row className="d-flex .flex-md-nowrap">
+        <Row className="d-flex flex-md-nowrap">
           {this.state.movies
             .filter((film) => {
               return film.Type !== "game" && film.Poster !== "N/A";
