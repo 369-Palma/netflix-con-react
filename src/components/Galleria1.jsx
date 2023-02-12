@@ -1,6 +1,6 @@
 import { Component } from "react";
-import { Container, Row, Card, Col } from "react-bootstrap";
-/* import CardTemplate from "./CardTemplate"; */
+import { Container, Row, Col } from "react-bootstrap";
+import CardTemplate from "./CardTemplate";
 
 class PhotoGallery extends Component {
   state = {
@@ -44,12 +44,7 @@ class PhotoGallery extends Component {
             .map((film, index) => {
               return (
                 <Col xs={6} md={2} key={index}>
-                  <Card className="text-bg-dark">
-                    <Card.Img variant="top" src={film.Poster} />
-                    <Card.Body>
-                      <Card.Title>{film.Title}</Card.Title>
-                    </Card.Body>
-                  </Card>
+                  <CardTemplate movie={film} />
                 </Col>
               );
             })}

@@ -1,16 +1,14 @@
-/* import Card from "react-bootstrap/Card";
+import Card from "react-bootstrap/Card";
 
 const CardTemplate = (props) => {
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={props.Cover} />
+    <Card className="text-bg-dark">
+      <Card.Img variant="top" src={props.movie.Poster} />
       <Card.Body>
-        <Card.Title>{props.Title}</Card.Title>
+        <Card.Title>{props.movie.Title}</Card.Title>
       </Card.Body>
-      <Card.Body></Card.Body>
     </Card>
   );
 };
 
 export default CardTemplate;
- */
